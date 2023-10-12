@@ -21,7 +21,7 @@ variable "github_organization_members" {
 resource "github_organization_settings" "organization_settings" {
   for_each                                                 = { for idx, org in var.github_organization : idx => org }
   billing_email                                            = "test@example.com"
-  company                                                  = "Skandinaviska Enskilda Banken AB"
+  company                                                  = "A company"
   description                                              = each.value.description
   email                                                    = each.value.email
   members_can_fork_private_repositories                    = each.value.members_can_fork_private_repositories
